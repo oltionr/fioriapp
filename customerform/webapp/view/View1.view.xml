@@ -1,0 +1,42 @@
+<mvc:View
+	controllerName="customerform.controller.View1"
+	xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core"
+	xmlns:m="sap.m"
+    height="100%">
+	<m:Page
+		showHeader="false"
+		enableScrolling="false"
+		class="sapUiContentPadding">
+		<m:content>
+			<Table
+				rows="{listModel>/}"
+				selectionMode="MultiToggle"
+				paste="onPaste"
+				ariaLabelledBy="title">
+				<extension>
+					<m:OverflowToolbar style="Clear">
+						<m:Title id="title" text="Products"/>
+					</m:OverflowToolbar>
+				</extension>
+				<columns>
+					<Column width="11rem">
+						<m:Label text="Client Number" />
+						<template>
+							<m:Text text="{listModel>Kunnr}" wrapping="false" />
+						</template>
+					</Column>
+                    <Column width="11rem">
+						<m:Label text="City" />
+						<template>
+							<m:Text text="{listModel>City1}" wrapping="false" />
+						</template>
+					</Column>
+					
+				</columns>
+			</Table>
+		</m:content>
+	</m:Page>
+</mvc:View>
